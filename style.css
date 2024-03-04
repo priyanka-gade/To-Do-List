@@ -1,25 +1,51 @@
 #upform{
     display: none;
+    margin-top: 20px;
 }
 div{
     margin-left: 450px;
     margin-top: 135px;
+    border: 1px solid black;
+    width: 500px;
+    padding: 50px;
+    background-color: rgb(217, 230, 248);
 }
-h1{
-    font-weight: bolder;
-    font-size: 50px;
-    text-shadow: 3px 3px 3px rgb(98, 97, 99);
+.title{
     color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 3px rgb(164, 164, 243);
+    font-weight: bolder;
 }
 input{
     height: 30px;
+    width: 280px;
+    background-color: rgb(217, 230, 248);
+    border: 0px;
+    border-bottom: 1px solid black;
 }
 input[type="submit"]{
     border-radius: 10px;
     width: 70px;
     height: 38px;
-    background-color:hotpink;
+    background-color:rgba(39, 35, 230, 0.319);
     color: rgb(22, 21, 21);
     font-weight: bolder;
+    font-family: cursive;
+    margin-left: 35px;
+
+}
+table{
+    margin-top: 30px;
+    font-family: cursive;
+}
+.btn{
+    margin:0px;
+    float: right;
+    width: 50px;
+    background-color: white;
+}
+.tab{
+    width: 250px;
+    font-weight: bold;
     font-family: cursive;
 }

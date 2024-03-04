@@ -10,21 +10,21 @@
 </head>
 <body>
     <div>
-        <h1>To-Do List</h1>
+        <h1 class="title">To-Do List</h1>
 
         <!-- create form -->
         <form action="javascript:void(0)" id="crform">
-            <input type="text" id="add-task">
+            <input type="text" id="add-task" placeholder="Enter task...">
             <input type="submit" onclick="adddata()" value="Create">
         </form>
 
         <!--Update form-->
         <form action="javascript:void(0)" id="upform">
-            <input type="text" id="update-task">
-            <input type="submit" onclick="" value="Update">
+            <input type="text" id="update-task" placeholder="Update task...">
+            <input type="submit" onclick="" value="Update" >
         </form>
-        <table class="table table-sm table-bordered">
-            <thead>
+        <table class="table">
+            <thead style="text-align: center;" class="table-striped table-danger">
                 <tr>
                     <th colspan="2">Add List</th>
                 </tr>
@@ -40,14 +40,14 @@
         function adddata(){
             let ele = document.getElementById("add-task").value;
             arr.push(ele);
-            showdata()
+            showdata();
         }
 
         function showdata(){
             let data="";
             for(let i=0;i<arr.length;i++){
                 data+="<tr>"
-                    data+="<td>"+arr[i]+"</td>"
+                    data+="<td class='tab'>"+arr[i]+"</td>"
                     data+="<td><button class='btn' onclick='deletedata("+i+")' ><i class='bi bi-trash'></i></button><button class='btn' onclick='editdata("+i+")'><i class='bi bi-pencil-square'></i></button></td>"
                 data+="</tr>"
             }
@@ -67,8 +67,13 @@
                 let ele = document.getElementById("update-task").value
                 arr.splice(indx,1,ele);
                  showdata();
+                 clearform();
             }
            
+        }
+
+        function clearform(){
+            document.getElementById("upform").style.display="none";
         }
     </script>
     </script>
